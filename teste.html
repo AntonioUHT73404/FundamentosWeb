@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lanchonete Mata Fome</title>
+	<style>
+	
+	body{
+		width:100%;
+		background-color: black;
+     }	
+
+    #menu_h{
+		list-style: none;
+     }
+
+     #menu_h li{
+    	display: inline; /*Deixar um do lado do outro*/
+     }
+
+     #menu_h li a{
+    	color: white;		   /*Cor da Fonte*/
+    	font-size: 18px;
+    	padding: 0px;		   /*Distanciamento entre os menus*/
+    	text-decoration: none; /*Sumir a linha sublinhada pelo link*/
+    	font-family: 'Indie Flower', cursive; /*Fonte de texto*/
+    	margin-left: 225px;
+     }
+
+     #menu_h li a:hover{
+    	color: orange; /*Alterando cor quando passar o mouse por cima*/
+     }
+
+	#logo{
+		position: fixed;
+		left: 2%;
+		top: -2%;  
+	}
+
+	#face{
+		position: fixed;
+		left: 87%;
+		top: 7%;        
+	}
+
+	#insta{
+		position: fixed;
+		left: 90%;
+		top: 7%;
+	}
+
+    </style>
+</head>
+<body>
+
+	<nav>  
+		<div class="menu">    
+			<div id="logo">
+			<img src="imagens/logo_lanchonete.png" style="width: 100%;"/></div>
+
+			<div id="face"><a href="https://www.facebook.com/">
+			<img src="imagens/logo_facebook.png" style="width:20%;"/></a></div>
+
+			<div id="insta"><a href="https://www.instagram.com/?hl=pt-br">
+			<img src="imagens/logo_instagram.png" style="width:47%;"/></a></div>
+			    
+			<br><br><br>
+			<ul id="menu_h"> 			
+				<li><a href="#lanche">LANCHES</a></li>
+				<li><a href="#hot">HOT DOGS</a></li>
+				<li><a href="#porcoes">PORÇÕES</a></li>
+				<li><a href="#bebidas">BEBIDAS</a></li>				   
+			</ul>
+		</div>
+	</nav>
+</body>
+</html>
