@@ -8,9 +8,9 @@
 
 <?php
     // Set session variables
-    $_SESSION["favcolor"] = "green";
-    $_SESSION["favanimal"] = "cat";
-    $_SESSION["nome"] = "Alciomar Hollanda";
+    $_SESSION["favcolor"] = "Blue";
+    $_SESSION["favanimal"] = "Dog";
+    $_SESSION["nome"] = "Antonio Oliveira";
     
     echo "Session variables are set.";
 ?>
