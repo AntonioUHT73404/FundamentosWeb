@@ -41,7 +41,7 @@
 
             
             </table>
-            header('location:viewall.php');
+            
         </form>   
 
 
