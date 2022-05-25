@@ -1,3 +1,26 @@
+<?php
+
+include'connect.php';
+
+// is set 
+if(isset($_POST['sub'])){
+    $u=$_POST['user'];
+    $p=$_POST['pass'];
+    
+   $s= "select * from reg where username='$u' and password= '$p'";   
+   $qu= mysqli_query($con, $s);
+   if(mysqli_num_rows($qu)>0){
+      $f= mysqli_fetch_assoc($qu);
+      $_SESSION['id']=$f['id'];
+      header ('location:home.php');
+   }
+   else{
+       echo 'username or password does not exist';
+   }
+  
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,14 +42,14 @@
   <!-- /.login-logo -->
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
-      <a href="../../index2.html" class="h1"><b>Admin</b>LTE</a>
+      <a href="AdminLTE-3.2.0/index2.html" class="h1"><b>Admin</b>LTE</a>
     </div>
     <div class="card-body">
       <p class="login-box-msg">Sign in to start your session</p>
 
-      <form action="../../index3.html" method="post">
+      <form method="post">
         <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="Email">
+          <input type="text" class="form-control" placeholder="Email"  name="user">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -34,7 +57,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" class="form-control" placeholder="Password"  name="pass">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -52,7 +75,7 @@
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+            <button type="submit" class="btn btn-primary btn-block"  name="sub">Sign In</button>
           </div>
           <!-- /.col -->
         </div>
@@ -82,10 +105,10 @@
 <!-- /.login-box -->
 
 <!-- jQuery -->
-<script src="../../plugins/jquery/jquery.min.js"></script>
+<script src="AdminLTE-3.2.0/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="AdminLTE-3.2.0/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
-<script src="../../dist/js/adminlte.min.js"></script>
+<script src="AdminLTE-3.2.0/dist/js/adminlte.min.js"></script>
 </body>
 </html>
